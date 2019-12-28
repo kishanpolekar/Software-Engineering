@@ -1,0 +1,7 @@
+The main software components in the home security system are database, biometrics, and the mobile application. The first thing that anyone interacts with is the cameras and biometric system. It will access the database, read information stored there, and determine if access is to be granted. We will design the system such that the database has multiple copies, both online and offline just in case internet connection goes off and also the wires do not work. When internet is back on, the data is synced to the cloud storage. We will be using distributed systems, and hence loss of data will not be an issue. The biometrics module will take inputs like fingerprints or Face ID, and verify it with the data stored either in its volatile memory or with the database. The mobile application will make use of both biometrics as well as database. Hence, the database is the soul of the system. 
+
+There will be many main and sub-classes in the system. It will mainly store values in a csv file or an excel sheet. These will contain many columns, with proper default values. The database schema will look something like this:
+
+Owner (id, fname, lname, age, finger, face, voice, priv)
+
+There will be several columns added/deleted from each database as the requirements come in. We will make sure to keep the program as flexible as possible in terms of needs.
